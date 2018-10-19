@@ -33,6 +33,6 @@ public static void addsRel() {
 }
 
 public static void addsCat() {
-	String $cat=process.substring(1,(process.length());
+	String $cat=process.substring(1,(process.length()-1);
 }
 }
