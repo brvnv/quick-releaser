@@ -7,9 +7,9 @@ import java.util.Scanner;
 public class Main {
 	public static void main (String[] args) {
 		System.out.println("Tell me where's the file with the latest releases.");
-		Scanner sc=new Scanner(System.in);
-		sc.nextLine();
-		FileReader file=new FileReader(sc);
+		Scanner scan=new Scanner(System.in);
+		String sc=scan.nextLine();
+	FileReader file=new FileReader(sc);
 		BufferedReader buf=new BufferedReader(file);
 		System.out.println("Processing...");
 		String process=buf.readLine();
