@@ -1,11 +1,11 @@
 package main;
 
-public class Main {
-	import java.io.FileReader;
-	import java.io.BufferedReader;
-	import java.util.Scanner;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.util.Scanner;
 
-	public static void main(String[] args) {
+public class Main {
+	public static void main (String[] args) {
 		System.out.println("Tell me where's the file with the latest releases.");
 		Scanner sc=new Scanner(System.in);
 		sc.nextLine();
@@ -14,8 +14,8 @@ public class Main {
 		System.out.println("Processing...");
 		String process=buf.readLine();
 		while(process!=null) { // do while line is not finished
-			if(process!matches("[")) addsRel();
-			else addsCat();
+			if(process.matches("[")) addsCat();
+			else addsRel();
 		}
 		System.out.println("Done. You're welcome.");
 		file.close();
