@@ -20,7 +20,6 @@ public class Main {
 		System.out.println("Done. You're welcome.");
 		file.close();
 	}
-}
 
 public static void addsRel() {
 	String $relname=process;
