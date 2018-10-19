@@ -1,5 +1,6 @@
 package main;
 
+import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.util.Scanner;
@@ -8,6 +9,7 @@ public class Main {
 	public static void main (String[] args) {
 		System.out.println("Tell me where's the file with the latest releases.");
 		Scanner scan=new Scanner(System.in);
+		try{
 		String sc=scan.nextLine();
 	FileReader file=new FileReader(sc);
 		BufferedReader buf=new BufferedReader(file);
@@ -19,6 +21,10 @@ public class Main {
 		}
 		System.out.println("Done. You're welcome.");
 		file.close();
+		}
+		catch (IOException e) {
+			System.out.println("Ah, don't waste my time, this file doesn't even exist...");
+		}
 	}
 
 public static void addsRel() {
