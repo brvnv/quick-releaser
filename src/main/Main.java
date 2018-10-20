@@ -15,10 +15,11 @@ public class Main {
 		BufferedReader buf=new BufferedReader(file);
 		System.out.println("Processing...");
 		String process=buf.readLine();
+		System.out.println(process);
 		while(process!=null) { // do while file is not finished
-			if(process.matches("[")) addsCat();
-			else addsRel();
-		}
+			if(process.matches("D(.*)")) System.out.println("começou com d");
+//			else addsRel();
+			}
 		System.out.println("Done. You're welcome.");
 		file.close();
 		}
@@ -33,6 +34,8 @@ public static void addsRel() {
 }
 
 public static void addsCat() {
-String $cat=process.substring(1, (process.length()-2));
+	int lineLength=process.length();
+	System.out.println(lineLength + "\n" + process);
+//String $cat=process.substring(1, lineLength-2);
 }
 }
