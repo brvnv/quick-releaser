@@ -15,7 +15,7 @@ public class Main {
 		BufferedReader buf=new BufferedReader(file);
 		System.out.println("Processing...");
 		String process=buf.readLine();
-		while(process!=null) { // do while line is not finished
+		while(process!=null) { // do while file is not finished
 			if(process.matches("[")) addsCat();
 			else addsRel();
 		}
@@ -33,6 +33,6 @@ public static void addsRel() {
 }
 
 public static void addsCat() {
-	String $cat=process.substring(1,(process.length()-1);
+String $cat=process.substring(1, (process.length()-2));
 }
 }
